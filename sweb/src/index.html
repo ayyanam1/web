@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>PHOTOSINTEZ</title>
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="headr__inner">
+            <div class="header__logo">PhotoFudzi</div>
+
+            <nav class="nav">
+                <a class="nav__link" href="#">About</a>
+                <a class="nav__link" href="#">Service</a>
+                <a class="nav__link" href="#">Blog</a>
+                <a class="nav__link" href="#">Work</a>
+                <a class="nav__link" href="#">Contact</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<div class="intro">
+    <div class="container">
+        <div class="intro__inner">
+            <h2 class="intro__suptitle">creative society</h2>
+            <h1 class="intro__title">Welcome to PhotoFudzi</h1>
+
+            <a class="btn" href="#">LERN MORE</a>
+        </div>
+    </div>
+</div>
+
+<section class="section">
+    <div class="container">
+    <div class="section__header">
+        <h3 class="section__suptitle">What we do</h3>
+        <h4 class="section__title">STORY ABOUT US</h4>
+        <div class="section__text">
+            <p>We are a society of creative people who want to monetize their hobby in order to create all the time and not depend on anything.</p>
+            </div>
+        </div>
+    
+    <div class="about">
+        <div class="about__item">
+            <div class="about__img">
+                <img src="img\about\1.jpg" alt="">
+            </div>
+            <div class="about__text">graphic artist</div>
+        </div>
+
+        <div class="about__item">
+            <div class="about__img">
+            <img src="img\about\2.jpg" alt="">
+        </div>
+
+        <div class="about__text">artist</div>
+    </div>
+        <div class="about__item">
+            <div class="about__img">
+            <img src="img\about\3.jpg" alt="">
+        </div>
+        <div class="about__text">photographer</div>
+    </div>
+    </div>
+    
+    </div>
+</section>
+
+
+<div class="statictics">
+    <div class="conteiner">
+        
+        <div class="stat">
+            <div class="stat__item">
+                <div class="stat__count">52</div>
+                <div class="stat__text">inefti</div>
+            </div>
+            <div class="stat__item">
+                <div class="stat__count">20</div>
+                <div class="stat__text">painting</div>
+            </div>
+            <div class="stat__item">
+                <div class="stat__count">99</div>
+                <div class="stat__text">photo</div>
+            </div>
+
+        </div>        
+    </div>
+</div>
+<section class="section">
+    <div class="container">
+
+        <div class="section__header">
+            <h5 class="section__suptitle">What We Love</h5>
+            <h6 class="section__title">What we live by</h6>
+            </div>
+    </div>
+</section>
+
+<div class="picher">
+    <div class="image__picher">
+        <div class="image"><img src="img/ga/a.jpeg" alt=""></div>
+        <div class="image"><img src="img/ga/d.jpg" alt=""></div>
+        <div class="image"><img src="img/ga/e.jpg" alt=""></div>
+        <div class="image"><img src="img/ga/ff.jpg" alt=""></div>
+        <div class="image"><img src="img/ga/oo.jpg" alt=""></div>
+        <div class="image"><img src="img/a/ee.jpg" alt=""></div>
+        <div class="image"><img src="img/a/qq.jpg" alt=""></div>
+        <div class="image"><img src="img/a/aa.jpg" alt=""></div>
+        <div class="image"><img src="img/a/zz.jpg" alt=""></div>
+        <div class="image"><img src="img/a/xx.jpg" alt=""></div>
+        <div class="image"><img src="img/p/q.jpeg" alt=""></div>
+        <div class="image"><img src="img/p/34.jpg" alt=""></div>
+        <div class="image"><img src="img/p/24.jpg" alt=""></div>
+        <div class="image"><img src="img/p/23.jpg" alt=""></div>
+        <div class="image"><img src="img/p/21.jpg" alt=""></div>
+    </div>
+    
+    
+    <div class="popup__image">
+        <span>&times;</span>
+        <img src="img/ga/q.jpeg" alt="">
+    </div>
+</div>
+
+<script>
+
+document.querySelectorAll('.image__picher img').forEach(image =>{
+    image.onclick = () =>{
+        document.querySelector('.popup__image').style.display = 'block';
+        document.querySelector('.popup__image img').src = image.getAttribute('src');
+    }
+});
+
+document.querySelector('.popup__image span').onclick = () =>{
+    document.querySelector('.popup__image').style.display = 'none';
+}
+
+</script>
+
+</body>
+</html>

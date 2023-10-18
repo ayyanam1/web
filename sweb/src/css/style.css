@@ -1,0 +1,380 @@
+body {
+    margin: 0;
+    font-family: 'Versus', sans-serif;
+
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+
+*,
+*:before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+
+/*container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*intro*/
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+
+    background: url("../img/kos.jpg")center
+    no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.intro__inner {
+    color: #fff;
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+
+    text-align: center;
+
+}
+
+.intro__title {
+    font-size: 80px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.intro__title:after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    margin: 50px auto;
+
+    background-color: #fff;
+}
+
+.intro__suptitle {
+    font-size: 72px;
+    color: #fff;
+    font-family: "acmesa";
+    
+}
+
+/* Header */
+.header {
+    width: 100%;
+    padding-top: 20px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.headr__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+}
+
+
+/* nav */
+.nav {
+    font-size: 14px;
+    text-transform: uppercase;
+    
+}
+/* текст навигации  */
+.nav__link {
+    display: inline-block;
+    vertical-align: top;
+    margin:0 10px;
+    position: relative;
+
+    text-decoration: none;
+    color:#fff;
+    font-family:"versus";
+
+    transition: color .1s linear;
+}
+
+.nav__link:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    
+
+    background-color: #333;
+    opacity: 0;
+
+    position: absolute;
+    top:100%
+    left 0%;
+    z-index: 1;
+
+    transition: opacity .1s linear;
+}
+
+.nav__link:hover {
+    color: #333;
+}
+
+.nav__link:hover::after {
+    opacity: 1;
+}
+
+/* button */
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 8px 30px;
+
+    border:3px solid #fff;
+    
+    font-size:14px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    transition: background .1s
+    linear, color .1s linear;
+
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+/* section */
+.section {
+    padding: 80px 0;
+}
+
+.section__header {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto 40px;
+
+    text-align: center;
+}
+
+.section__suptitle {
+    font-family:"acmesa";
+    font-size: 24px;
+    color: #333;
+}
+
+.section__title {
+    font-family: 'Versus';
+    font-size: 30px;
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.section__title:after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    margin: 50px auto;
+
+    background-color: #24abe0;
+}
+
+.section__text {
+    font-family: "asmesa";
+    font-size: 30px;
+    color: #999
+}
+
+
+/* About */
+
+.about {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about__item {
+    width: 250px;
+    position: relative;
+
+    background-color:#24abe0;
+}
+
+.about__item:hover .about__img {
+    transform: translate3d(-10px, -10px, 0 );
+}
+
+.about__item:hover .about__img img  {
+    opacity: .1;
+    
+}
+
+.about__item:hover .about__text {
+    opacity: 1;
+
+}
+
+.about__img {
+    background: linear-gradient(to bottom,
+    #0066ff,#66ff99 );
+
+    transition: transform .2s linear;
+}
+
+.about__img img {
+    display: block;
+    transition: opacity .1s linear;
+}
+
+.about__text {
+    width: 100%;
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    opacity: 0;
+
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    transform: translate3d(0, -50%, 0);
+
+    transition:opacity .1s linear;
+}
+
+
+/* statistics */
+.statictics {
+    background-color: #24abe0;
+
+}
+
+.stat {
+    display: flex;
+}
+
+.stat__item {
+    flex: 1 1 0;
+    padding: 70px;
+
+    border-left: 1px solid #b5eae0;
+
+    text-align: center;
+    color: #fff;
+}
+
+.stat__item:last-child {
+    border-right: 1px solid #b5eae0;
+}
+
+.stat__count {
+    margin-bottom: 10px;
+    
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.stat__text {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: "acmesa";
+}
+
+/* галерея блок 1 */
+.picher .image__picher {
+    display: flex;
+    flex-wrap:wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.picher .image__picher .image{
+    height: 250px;
+    width: 350px;
+    border: 3px solid #9acadd;
+    box-shadow: 0 5px 15px (0,0,0,.1);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.picher .image__picher .image img{
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+    transition: .2s linear;
+}
+
+.picher .image__picher .image:hover img{
+    transform: scale(1.1);
+}
+
+.picher .popup__image{
+    position: fixed;
+    top: 0; left: 0;
+    background: rgba(0,0,0,.9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.picher .popup__image span{
+    position: absolute;
+    top: 0; right: 10px;
+    font-size: 60px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+    z-index: inherit;
+}
+
+.picher .popup__image img{
+    position: absolute;
+    top:50%; left: 50%;
+    transform: translate(-50%, -50%);
+    border:5px solid #fff;
+    border-radius: 5px;
+    width:750px;
+    object-fit: cover;
+}
+
+@media (max-width:768px){
+    .picher .popup__image img{
+        width: 95%;
+    }
+}
+
+
+
+
